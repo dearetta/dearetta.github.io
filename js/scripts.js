@@ -246,14 +246,14 @@ $(document).ready(function () {
       title: "Dela and Atuy's Wedding",
 
       // Event start date
-      start: new Date("Dec 20, 2020 10:30"),
+      start: new Date("Dec 20, 2020 13:00"),
 
       // Event duration (IN MINUTES)
       // duration: 120,
 
       // You can also choose to set an end time
       // If an end time is set, this will take precedence over duration
-      end: new Date("Dec 20, 2017 15:00"),
+      end: new Date("Dec 20, 2020 15:00"),
 
       // Event Address
       address: "Plataran Cilandak, Jakarta Selatan",
@@ -277,10 +277,7 @@ $(document).ready(function () {
       )
     );
 
-    if (
-      MD5($("#invite_code").val()) !== "b0e53b10c1f55ede516b240036b88f40" &&
-      MD5($("#invite_code").val()) !== "2ac7f43695eb0479d5846bb38eec59cc"
-    ) {
+    if ($("#invite_code").val() !== "201220") {
       $("#alert-wrapper").html(
         alert_markup(
           "danger",
@@ -289,7 +286,7 @@ $(document).ready(function () {
       );
     } else {
       $.post(
-        "https://script.google.com/macros/s/AKfycbxngXC-NpRnL2RLEzbbVXEhdHfr-eqh1zSZffKesLLZ6bid1Lc/exec",
+        "https://script.google.com/macros/s/AKfycbzqbHfR75_5kFqv1e7TpF32OVmYSTHjuLr4zn2LNOeZZQ8knsI/exec",
         data
       )
         .done(function (data) {
@@ -317,33 +314,33 @@ $(document).ready(function () {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-  const location = { lat: -6.32136518106271, lng: 106.81550066087645 };
-  var map = new google.maps.Map(document.getElementById("map-canvas"), {
-    zoom: 15,
-    center: location,
-    scrollwheel: false,
-  });
+// function initMap() {
+//   const location = { lat: -6.32136518106271, lng: 106.81550066087645 };
+//   var map = new google.maps.Map(document.getElementById("map-canvas"), {
+//     zoom: 15,
+//     center: location,
+//     scrollwheel: false,
+//   });
 
-  var marker = new google.maps.Marker({
-    position: location,
-    map: map,
-  });
-}
+//   var marker = new google.maps.Marker({
+//     position: location,
+//     map: map,
+//   });
+// }
 
-function initBBSRMap() {
-  var la_fiesta = { lat: -6.32136518106271, lng: 106.81550066087645 };
-  var map = new google.maps.Map(document.getElementById("map-canvas"), {
-    zoom: 15,
-    center: la_fiesta,
-    scrollwheel: false,
-  });
+// function initBBSRMap() {
+//   var la_fiesta = { lat: -6.32136518106271, lng: 106.81550066087645 };
+//   var map = new google.maps.Map(document.getElementById("map-canvas"), {
+//     zoom: 15,
+//     center: la_fiesta,
+//     scrollwheel: false,
+//   });
 
-  var marker = new google.maps.Marker({
-    position: la_fiesta,
-    map: map,
-  });
-}
+//   var marker = new google.maps.Marker({
+//     position: la_fiesta,
+//     map: map,
+//   });
+// }
 
 // alert_markup
 function alert_markup(alert_type, msg) {
