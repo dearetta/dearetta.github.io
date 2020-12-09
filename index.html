@@ -328,7 +328,8 @@
             <p>It's way easier than you think!</p>
         </div>
         <div id="map-canvas">
-            <img style="height: auto; width: 100%;" src="img/maps.png" />
+            <img class="hidden-sm hidden-xs" style="max-height: 400px; width: 100%;" src="img/maps.png" />
+            <img class="hidden-md hidden-lg" style="max-height: 400px; width: 150%;" src="img/maps-sm.png" />
         </div>
         <div id="map-content-wrapper" class="container pointer-events-none">
             <div class="row">
@@ -367,7 +368,7 @@
                     <div class="modal-body">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                         </button>
-                        <div class="section-padding">
+                        <div class="section-padding" style="padding-top: 180px;">
                             <h3>Thank you!</h3>
                             <p>We are glad to see you join us on our big day.</p>
                             <div id="add-to-cal"></div>
