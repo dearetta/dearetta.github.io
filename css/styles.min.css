@@ -793,10 +793,8 @@ header .member-actions {
 #map-canvas {
   height: 500px;
   width: 100%;
-  background-image: url("/img/plataran.jpg");
 }
 #map-content-wrapper {
-  background-image: url("/img/plataran.jpg");
   position: relative;
   margin-top: -502px;
   margin-bottom: 150px;
